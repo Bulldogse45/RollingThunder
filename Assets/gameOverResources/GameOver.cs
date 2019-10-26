@@ -76,7 +76,7 @@ public class GameOver : MonoBehaviour
     public void SubmitHighScore()
     {
         newName = highScoreName.text;
-        newScore = highScore;
+        newScore = currentScore;
         SceneManager.LoadScene("highScoreTable");
     }
 }
