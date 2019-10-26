@@ -52,18 +52,10 @@ public class GameOver : MonoBehaviour
        
     }
 
-    /*This function determines the index of the current scene.
-     * If that index + 1 is greater than the number of scenes in the 
-     * build, then you're currently on the game over scene so the start 
-     * scene will be loader. Otherwise, it will load the next indexed scene
-     */
-    public void LoadNextScene()
+    //This function takes the user to the start scene    
+    public void LoadStartScene()
     {
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        if (currentSceneIndex + 1 >= SceneManager.sceneCountInBuildSettings)
             SceneManager.LoadScene(0);
-        else
-            SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
     //This function quits the game. 

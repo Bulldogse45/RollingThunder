@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HighScoreScript : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class HighScoreScript : MonoBehaviour
 
     private void Awake()
     {
+        //grab containers with the high score template and hide
         entryContainer = GameObject.Find("highScoreEntryTable").transform; 
         entryTemplate = entryContainer.Find("highScoreEntryTemplate");
 
@@ -43,4 +45,17 @@ public class HighScoreScript : MonoBehaviour
         }
         
     }
+
+    //Takes user to the start scene
+    public void LoadStartScene()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    //This function quits the game. 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
 }
