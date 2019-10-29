@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 84a12249fa5a84e29b0a859a2cfa2a1e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Rainball
+  fontNames:
+  - Rainball
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 7b0823dc34c1f423b9ded4099c4c005a, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

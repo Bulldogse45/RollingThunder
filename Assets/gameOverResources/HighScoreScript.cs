@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class HighScoreScript : MonoBehaviour
 {
-   /* [SerializeField] Text nameNew;
+ /*  [SerializeField] Text nameNew;
     [SerializeField] Text score;
     
     // Start is called before the first frame update
@@ -21,11 +21,11 @@ public class HighScoreScript : MonoBehaviour
     void Update()
     {
         
-    }*/
-    
+    }
+    */
     private Transform entryContainer;
     private Transform entryTemplate;
-
+    
     private void Awake()
     {
         //grab containers with the high score template and hide
@@ -45,7 +45,7 @@ public class HighScoreScript : MonoBehaviour
         }
         
     }
-
+    
     //Takes user to the start scene
     public void LoadStartScene()
     {
@@ -57,5 +57,5 @@ public class HighScoreScript : MonoBehaviour
     {
         Application.Quit();
     }
-
+    
 }
