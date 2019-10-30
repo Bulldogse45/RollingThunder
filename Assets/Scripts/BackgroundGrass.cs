@@ -15,6 +15,8 @@ public class BackgroundGrass : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // help from this video on scrolling background
+        // https://www.youtube.com/watch?v=IgZQjGyB9zg
         float newPosition = Mathf.Repeat (Time.time * fallSpeed, 10f);
         transform.position = startPosition + Vector2.down * newPosition;
     }
