@@ -7,6 +7,11 @@ public class endGameCollider : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
    {
-       SceneManager.LoadScene("GameOver");
+        //print(collision.gameObject.name);
+        if (collision.gameObject.name == "Ball") {
+
+            print("hello");
+            SceneManager.LoadScene("GameOver");
+        }
    }
 }
