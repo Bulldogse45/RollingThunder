@@ -8,10 +8,10 @@ using UnityEngine.UI;
 public class GameOver : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI scoreText;
-    [SerializeField] int currentScore = 300;
+    //[SerializeField] int currentScore = 300;
     [SerializeField] GameObject highScoreContainer;
     [SerializeField] GameObject nonHighScoreButtons;
-    int highScore = 100;
+    int highScore = 20;
 
     private Transform highScoreInfo;
     private Transform highScoreTemp;
@@ -30,8 +30,8 @@ public class GameOver : MonoBehaviour
      */
     void Start()
     {
-       scoreText.text = currentScore.ToString();
-       if(currentScore < highScore)
+       scoreText.text = ScoreScript.endScore.ToString();
+       if(ScoreScript.endScore < highScore)
         {
             highScoreContainer.SetActive(false);
         }
@@ -68,7 +68,7 @@ public class GameOver : MonoBehaviour
     public void SubmitHighScore()
     {
         newName = highScoreName.text;
-        newScore = currentScore;
+        newScore = ScoreScript.endScore;
         SceneManager.LoadScene("highScoreTable");
     }
 }
