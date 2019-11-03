@@ -112,7 +112,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &100553773
+--- !u!1 &121803998
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,70 +120,51 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 100553776}
-  - component: {fileID: 100553775}
-  - component: {fileID: 100553774}
-  m_Layer: 5
-  m_Name: TMP SubMeshUI [Rainball SDF Material + LiberationSans SDF Atlas]
+  - component: {fileID: 121804000}
+  - component: {fileID: 121803999}
+  m_Layer: 0
+  m_Name: RandomGen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &100553774
+--- !u!114 &121803999
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100553773}
+  m_GameObject: {fileID: 121803998}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a49cc0fcb78a4fa59eebc4ef457978f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_spriteAsset: {fileID: 0}
-  m_material: {fileID: 0}
-  m_sharedMaterial: {fileID: 0}
-  m_isDefaultMaterial: 0
-  m_padding: 8.5625
-  m_canvasRenderer: {fileID: 100553775}
-  m_TextComponent: {fileID: 770021447}
-  m_materialReferenceIndex: 1
---- !u!222 &100553775
-CanvasRenderer:
+  spawnTime: 1
+  path: 3
+  prefabs:
+  - {fileID: 3053432419548291576, guid: 9a66ae1a516e240a2b531add86742e20, type: 3}
+  - {fileID: 7424912744008805635, guid: b863a24bdedc84ae395052cc4da401e5, type: 3}
+  - {fileID: 4367732632584538995, guid: c126deb5df6304b2bbb18db004665545, type: 3}
+  - {fileID: 7156929412364454833, guid: 74da23eff810746079761d1707c87879, type: 3}
+  - {fileID: 1800381967915297471, guid: caa5fbeecfde34538be3050c2616dba0, type: 3}
+  - {fileID: 7379697386244440472, guid: 10ce6db71a7b44358aeca65337070743, type: 3}
+  - {fileID: 5882129324372161055, guid: 4f66ef9dd3cdf49f7a93ab68a7e32d54, type: 3}
+--- !u!4 &121804000
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100553773}
-  m_CullTransparentMesh: 0
---- !u!224 &100553776
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100553773}
+  m_GameObject: {fileID: 121803998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 13.928431, y: 1.7433219, z: -0.8232604}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 770021446}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 54.5, y: -23.5}
-  m_SizeDelta: {x: 109, y: 47}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &278759455
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,7 +254,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &469407175
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -396,7 +377,7 @@ GameObject:
   m_Component:
   - component: {fileID: 523105878}
   - component: {fileID: 523105879}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -827,7 +808,7 @@ GameObject:
   m_Component:
   - component: {fileID: 917117724}
   - component: {fileID: 917117725}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -884,7 +865,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1068201906}
   - component: {fileID: 1068201907}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: RightWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1018,7 +999,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 6.156
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1042,7 +1023,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1274651290}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -0.06, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1344,7 +1325,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1848159376}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -11, z: 0}
+  m_LocalPosition: {x: -0.02, y: -10.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2080971110}
