@@ -113,10 +113,14 @@ NavMeshSettings:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &100553773
 =======
 --- !u!1 &121803998
 >>>>>>> Add bush prefab and generator
+=======
+--- !u!1 &121803998
+>>>>>>> c9c84d6f56469ff96bdc09754354fa6778a76bb9
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,32 +129,43 @@ GameObject:
   serializedVersion: 6
   m_Component:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - component: {fileID: 100553776}
   - component: {fileID: 100553775}
   - component: {fileID: 100553774}
   m_Layer: 5
   m_Name: TMP SubMeshUI [Rainball SDF Material + LiberationSans SDF Atlas]
 =======
+=======
+>>>>>>> c9c84d6f56469ff96bdc09754354fa6778a76bb9
   - component: {fileID: 121804000}
   - component: {fileID: 121803999}
   m_Layer: 0
   m_Name: RandomGen
+<<<<<<< HEAD
 >>>>>>> Add bush prefab and generator
+=======
+>>>>>>> c9c84d6f56469ff96bdc09754354fa6778a76bb9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &100553774
 =======
 --- !u!114 &121803999
 >>>>>>> Add bush prefab and generator
+=======
+--- !u!114 &121803999
+>>>>>>> c9c84d6f56469ff96bdc09754354fa6778a76bb9
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_GameObject: {fileID: 100553773}
   m_Enabled: 1
@@ -176,6 +191,8 @@ MonoBehaviour:
 --- !u!222 &100553775
 CanvasRenderer:
 =======
+=======
+>>>>>>> c9c84d6f56469ff96bdc09754354fa6778a76bb9
   m_GameObject: {fileID: 121803998}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -194,6 +211,7 @@ CanvasRenderer:
   - {fileID: 5882129324372161055, guid: 4f66ef9dd3cdf49f7a93ab68a7e32d54, type: 3}
 --- !u!4 &121804000
 Transform:
+<<<<<<< HEAD
 >>>>>>> Add bush prefab and generator
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -204,10 +222,13 @@ Transform:
   m_CullTransparentMesh: 0
 --- !u!224 &100553776
 RectTransform:
+=======
+>>>>>>> c9c84d6f56469ff96bdc09754354fa6778a76bb9
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 100553773}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -222,6 +243,8 @@ RectTransform:
   m_SizeDelta: {x: 109, y: 47}
   m_Pivot: {x: 0.5, y: 0.5}
 =======
+=======
+>>>>>>> c9c84d6f56469ff96bdc09754354fa6778a76bb9
   m_GameObject: {fileID: 121803998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.928431, y: 1.7433219, z: -0.8232604}
@@ -230,7 +253,10 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 >>>>>>> Add bush prefab and generator
+=======
+>>>>>>> c9c84d6f56469ff96bdc09754354fa6778a76bb9
 --- !u!1 &278759455
 GameObject:
   m_ObjectHideFlags: 0
