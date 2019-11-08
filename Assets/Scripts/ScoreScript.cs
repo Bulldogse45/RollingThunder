@@ -8,6 +8,7 @@ public class ScoreScript : MonoBehaviour
     [SerializeField] int currentScore = 0;
     [SerializeField] int matchesCount = 0;
     [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] TextMeshProUGUI matchCountText;
 
     //Static variable to be used in other scripts
     public static int endScore;
@@ -19,6 +20,7 @@ public class ScoreScript : MonoBehaviour
     void Start()
     {
         scoreText.text = currentScore.ToString();
+        matchCountText.text = matchesCount.ToString();
         InvokeRepeating("UpdateScore", 0, 1f);
     }
 
@@ -56,6 +58,8 @@ public class ScoreScript : MonoBehaviour
     }
 
     public void incrementMatchesCount(){
-        matchesCount++;
+        matchesCount = matchesCount + 1;
+        print("incrementing match count");
+        matchCountText.text = matchesCount.ToString();
     }
 }

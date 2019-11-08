@@ -26,7 +26,6 @@ public class GenerateObject : MonoBehaviour
         GameObject obj = Instantiate(prefabs[Random.Range(0, prefabs.Length)]);
         float set = Random.Range(-screenBounds.x, screenBounds.x + 5);
         obj.transform.position = new Vector2(0, screenBounds.y * -2f);
-        print(screenBounds.x); 
                 
     }
     IEnumerator objectsSpawns() {

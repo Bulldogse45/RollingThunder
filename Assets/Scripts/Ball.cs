@@ -12,7 +12,6 @@ public class Ball : MonoBehaviour
             rb2D.velocity = new Vector2(-12f, 0f);
         }
         if (Input.GetKey(KeyCode.D)){
-            print("This is a test");
             rb2D.velocity = new Vector2(15f, 0f);
         }
         if (Input.GetKey(KeyCode.W)){
@@ -28,7 +27,6 @@ public class Ball : MonoBehaviour
         {
             Destroy(collision.gameObject);
             ss.incrementMatchesCount();
-            print("Got it!");
         }
     }
     
