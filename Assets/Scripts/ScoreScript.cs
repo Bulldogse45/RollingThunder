@@ -55,7 +55,7 @@ public class ScoreScript : MonoBehaviour
         endScore = currentScore;
     }
 
-    public void incrementCount(){
+    public void incrementMatchesCount(){
         matchesCount++;
     }
 }

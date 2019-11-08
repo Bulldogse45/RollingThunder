@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
+    [SerializeField] ScoreScript ss;
     void Update()
     {
         Rigidbody2D rb2D = GetComponent<Rigidbody2D>();
@@ -26,8 +27,7 @@ public class Ball : MonoBehaviour
         if(collision.gameObject.name == "Matches") 
         {
             Destroy(collision.gameObject);
-            ScriptName sn = gameObject.GetComponent<ScriptName>();
-            sn.MyFunction();
+            ss.incrementMatchesCount();
             print("Got it!");
         }
     }
