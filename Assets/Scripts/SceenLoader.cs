@@ -18,7 +18,6 @@ public class SceenLoader : MonoBehaviour
     }
     public void HighScores() {
 
-        Scene scene = SceneManager.GetSceneByName(highScoreScene);
-        SceneManager.LoadScene(scene.buildIndex);
+        SceneManager.LoadScene("highScoreTable");
     }
 }
