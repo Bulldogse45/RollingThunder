@@ -59,7 +59,13 @@ public class ScoreScript : MonoBehaviour
 
     public void incrementMatchesCount(){
         matchesCount = matchesCount + 1;
-        print("incrementing match count");
         matchCountText.text = matchesCount.ToString();
+    }
+    public void decrementMatchesCount(){
+        matchesCount = matchesCount - 1;
+        matchCountText.text = matchesCount.ToString();
+    }
+    public int getMatchesCount(){
+        return matchesCount;
     }
 }

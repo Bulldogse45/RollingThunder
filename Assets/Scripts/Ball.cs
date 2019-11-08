@@ -29,5 +29,13 @@ public class Ball : MonoBehaviour
             ss.incrementMatchesCount();
         }
     }
+    void OnCollisionStay2D(Collision2D collision) 
+    {
+        if(ss.getMatchesCount() > 0 && Input.GetKey(KeyCode.J) && collision.gameObject.name.Contains("Hedge")) 
+        {
+            Destroy(collision.gameObject);
+            ss.decrementMatchesCount();
+        }
+    }
     
 }
