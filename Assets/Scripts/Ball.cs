@@ -23,9 +23,12 @@ public class Ball : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision) 
     {
-        if(collision.gameObject.name == "Floor") 
+        if(collision.gameObject.name == "Matches") 
         {
-            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            Destroy(collision.gameObject);
+            ScriptName sn = gameObject.GetComponent<ScriptName>();
+            sn.MyFunction();
+            print("Got it!");
         }
     }
     
