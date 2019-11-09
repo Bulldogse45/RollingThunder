@@ -9,8 +9,6 @@ public class endGameCollider : MonoBehaviour
    {
         //print(collision.gameObject.name);
         if (collision.gameObject.name == "Ball") {
-
-            print("hello");
             SceneManager.LoadScene("GameOver");
         }
    }

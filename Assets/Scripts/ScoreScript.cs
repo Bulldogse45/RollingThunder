@@ -5,8 +5,10 @@ using TMPro;
 
 public class ScoreScript : MonoBehaviour
 {
-    public static int currentScore = 0;
+    [SerializeField] public static int currentScore = 0;
+    [SerializeField] int matchesCount = 0;
     [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] TextMeshProUGUI matchCountText;
 
     //Static variable to be used in other scripts
     public static int endScore;
@@ -18,6 +20,7 @@ public class ScoreScript : MonoBehaviour
     void Start()
     {
         scoreText.text = currentScore.ToString();
+        matchCountText.text = matchesCount.ToString();
         InvokeRepeating("UpdateScore", 0, 1f);
     }
 
@@ -52,5 +55,17 @@ public class ScoreScript : MonoBehaviour
 
         scoreText.text = currentScore.ToString();
         endScore = currentScore;
+    }
+
+    public void incrementMatchesCount(){
+        matchesCount = matchesCount + 1;
+        matchCountText.text = matchesCount.ToString();
+    }
+    public void decrementMatchesCount(){
+        matchesCount = matchesCount - 1;
+        matchCountText.text = matchesCount.ToString();
+    }
+    public int getMatchesCount(){
+        return matchesCount;
     }
 }

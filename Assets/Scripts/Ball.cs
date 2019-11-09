@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
+    [SerializeField] ScoreScript ss;
     void Update()
     {
         Rigidbody2D rb2D = GetComponent<Rigidbody2D>();
@@ -11,7 +12,6 @@ public class Ball : MonoBehaviour
             rb2D.velocity = new Vector2(-12f, 0f);
         }
         if (Input.GetKey(KeyCode.D)){
-            print("This is a test");
             rb2D.velocity = new Vector2(15f, 0f);
         }
         if (Input.GetKey(KeyCode.W)){
@@ -23,9 +23,18 @@ public class Ball : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision) 
     {
-        if(collision.gameObject.name == "Floor") 
+        if(collision.gameObject.name.Contains("Matches"))
         {
-            GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            Destroy(collision.gameObject);
+            ss.incrementMatchesCount();
+        }
+    }
+    void OnCollisionStay2D(Collision2D collision) 
+    {
+        if(ss.getMatchesCount() > 0 && Input.GetKey(KeyCode.J) && collision.gameObject.name.Contains("Hedge")) 
+        {
+            Destroy(collision.gameObject);
+            ss.decrementMatchesCount();
         }
     }
     
