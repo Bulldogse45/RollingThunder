@@ -5,20 +5,28 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     [SerializeField] ScoreScript ss;
+    public float speed;
+
+
+    public void Start() {
+
+        speed = 1;
+    }
     void Update()
     {
         Rigidbody2D rb2D = GetComponent<Rigidbody2D>();
-        if (Input.GetKey(KeyCode.A)){
-            rb2D.velocity = new Vector2(-12f, 0f);
+        if (Input.GetKey(KeyCode.A)) {
+            rb2D.velocity = new Vector2(-12f * speed, rb2D.velocity.y);
         }
-        if (Input.GetKey(KeyCode.D)){
-            rb2D.velocity = new Vector2(15f, 0f);
+        if (Input.GetKey(KeyCode.D)) {
+
+            rb2D.velocity = new Vector2(15f * speed, rb2D.velocity.y);
         }
-        if (Input.GetKey(KeyCode.W)){
-            rb2D.velocity = new Vector2(0f, 7.5f);
+        if (Input.GetKey(KeyCode.W)) {
+            rb2D.velocity = new Vector2(rb2D.velocity.x, 7.5f * speed);
         }
-        if (Input.GetKey(KeyCode.S)){
-            rb2D.velocity = new Vector2(0f, -12f);
+        if (Input.GetKey(KeyCode.S)) {
+            rb2D.velocity = new Vector2(rb2D.velocity.x, -12f * speed);
         }
     }
     void OnCollisionEnter2D(Collision2D collision) 

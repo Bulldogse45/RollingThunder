@@ -9,6 +9,7 @@ public class GenerateObject : MonoBehaviour
 
    public GameObject[] prefabs = new GameObject[11];
    public GameObject matches;
+   public GameObject Pond;
    private float screenLeft; 
    private Vector2 screenBounds;
  
@@ -18,8 +19,9 @@ public class GenerateObject : MonoBehaviour
      screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
      screenLeft = screenBounds.x;
      StartCoroutine(objectsSpawns());
- 
-   }
+     StartCoroutine(pondSpawns());
+
+    }
    void Spawn() {
      
      GameObject obj = Instantiate(prefabs[Random.Range(0, prefabs.Length)]);
@@ -28,20 +30,27 @@ public class GenerateObject : MonoBehaviour
  
    }
    IEnumerator objectsSpawns() {
-     while (true) {
-       yield return new WaitForSeconds(spawnTime);
-         Spawn();
+        while (true) {
+          yield return new WaitForSeconds(spawnTime);
+          Spawn();
+        }
     }
-  }
- 
-  void Update()
-  {
+  IEnumerator pondSpawns() {
+
+        while (true) {
+            yield return new WaitForSeconds(Random.Range(2.0f, 6.0f));
+            spawnPond();
+        }
+    }
+    void Update()
+    {
     addMatchCheck(); 
   }
  
   public void addMatchCheck()
   {
     int matchRandom = Random.Range(0, 500);
+
     if(matchRandom == 0)
     {
       GameObject newMatches = Instantiate(matches);
@@ -50,4 +59,10 @@ public class GenerateObject : MonoBehaviour
       newMatches.transform.position = new Vector3(xCoor, yCoor, -.01f);
     }
   }
+  void spawnPond() {
+
+        GameObject obj = Instantiate(Pond);
+        float set = Random.Range(-screenBounds.x, screenBounds.x);
+        obj.transform.position = new Vector3(set, screenBounds.y * -3f, -0.1f);
+    }
 }
