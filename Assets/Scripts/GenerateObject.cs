@@ -41,7 +41,7 @@ public class GenerateObject : MonoBehaviour
  
   public void addMatchCheck()
   {
-    int matchRandom = Random.Range(0, 1000);
+    int matchRandom = Random.Range(0, 500);
     if(matchRandom == 0)
     {
       GameObject newMatches = Instantiate(matches);

@@ -5,7 +5,7 @@ using TMPro;
 
 public class ScoreScript : MonoBehaviour
 {
-    [SerializeField] int currentScore = 0;
+    [SerializeField] public static int currentScore = 0;
     [SerializeField] int matchesCount = 0;
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] TextMeshProUGUI matchCountText;
