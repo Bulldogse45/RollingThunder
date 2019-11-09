@@ -19,7 +19,7 @@ public class Pellet : MonoBehaviour
     {
         GameObject obj = Instantiate(pellet);
         float set = Random.Range(-screenArea.x, screenArea.x);
-        obj.transform.position = new Vector2(set, screenArea.y * -3f);
+        obj.transform.position = new Vector3(set, screenArea.y * -3f, -0.1f);
     }
 
     IEnumerator pelletSpawns()

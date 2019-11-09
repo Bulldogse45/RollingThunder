@@ -974,7 +974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de5ce15a0d9603f4ab7c395a86296ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pellet: {fileID: 3827128183241118946, guid: f3efe9cab3b0af145bcb3682ededc218, type: 3}
+  pellet: {fileID: 4625162038754614543, guid: bf0a91ecd09a6394f8fdc137af2974bc, type: 3}
 --- !u!4 &1214853215
 Transform:
   m_ObjectHideFlags: 0
