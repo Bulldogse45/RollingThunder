@@ -23,7 +23,7 @@ public class Ball : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision) 
     {
-        if(collision.gameObject.name == "Matches") 
+        if(collision.gameObject.name.Contains("Matches"))
         {
             Destroy(collision.gameObject);
             ss.incrementMatchesCount();
