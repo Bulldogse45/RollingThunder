@@ -5,7 +5,7 @@ using TMPro;
 
 public class ScoreScript : MonoBehaviour
 {
-    [SerializeField] int currentScore = 0;
+    public static int currentScore = 0;
     [SerializeField] TextMeshProUGUI scoreText;
 
     //Static variable to be used in other scripts
