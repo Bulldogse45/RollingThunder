@@ -7,8 +7,10 @@ public class ScoreScript : MonoBehaviour
 {
     [SerializeField] public static int currentScore = 0;
     [SerializeField] int matchesCount = 0;
+    [SerializeField] public static int clockCount = 0;
     [SerializeField] TextMeshProUGUI scoreText;
     [SerializeField] TextMeshProUGUI matchCountText;
+    [SerializeField] TextMeshProUGUI clockCountText;
 
     //Static variable to be used in other scripts
     public static int endScore;
@@ -67,5 +69,26 @@ public class ScoreScript : MonoBehaviour
     }
     public int getMatchesCount(){
         return matchesCount;
+    }
+
+    public void scoreOnScreen()
+    {
+        scoreText.text = currentScore.ToString();
+        endScore = currentScore;
+    }
+
+    public void incrementClockCount()
+    {
+        clockCount = clockCount + 1;
+        clockCountText.text = clockCount.ToString();
+    }
+    public void decrementClockCount()
+    {
+        clockCount = clockCount - 1;
+        clockCountText.text = clockCount.ToString();
+    }
+    public int getClockCount()
+    {
+        return clockCount;
     }
 }
