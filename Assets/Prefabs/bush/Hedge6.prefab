@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6190579355386012709}
   - component: {fileID: 688791388658044637}
+  - component: {fileID: 8291469786666547757}
   m_Layer: 10
   m_Name: Hedge_0002 (4)
   m_TagString: Untagged
@@ -28,8 +29,8 @@ Transform:
   m_LocalPosition: {x: 0.07, y: -0.37790215, z: 0.28794742}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
-  m_Father: {fileID: 5882129324372161053}
-  m_RootOrder: 8
+  m_Father: {fileID: 5324793787170730901}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &688791388658044637
 SpriteRenderer:
@@ -79,6 +80,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8291469786666547757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764639298554947581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63c5d515dea62413ba72f60c78e31a60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bushBurn: {fileID: 2606221310925022800, guid: 689e9b0e296ab4a779b3b70371f06f25,
+    type: 3}
+  matchStrike: {fileID: 8300000, guid: 54d8606b805b44bc3b433abe92e0735a, type: 3}
 --- !u!1 &1936775816329125200
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,6 +105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6375256975346223128}
   - component: {fileID: 6267982541203154688}
+  - component: {fileID: 8494440869105871596}
   m_Layer: 0
   m_Name: Hedge_0001
   m_TagString: Untagged
@@ -107,8 +124,8 @@ Transform:
   m_LocalPosition: {x: -9.01, y: -0.38, z: 0.28794742}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
-  m_Father: {fileID: 5882129324372161053}
-  m_RootOrder: 3
+  m_Father: {fileID: 6682714261124005876}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6267982541203154688
 SpriteRenderer:
@@ -158,6 +175,185 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8494440869105871596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936775816329125200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63c5d515dea62413ba72f60c78e31a60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bushBurn: {fileID: 2606221310925022800, guid: 689e9b0e296ab4a779b3b70371f06f25,
+    type: 3}
+  matchStrike: {fileID: 8300000, guid: 54d8606b805b44bc3b433abe92e0735a, type: 3}
+--- !u!1 &2090449248883209036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6682714261124005876}
+  - component: {fileID: 3330359476774511334}
+  - component: {fileID: 6301517757315843422}
+  m_Layer: 10
+  m_Name: HedgePart1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6682714261124005876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090449248883209036}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2511850632806669560}
+  - {fileID: 6375256975346223128}
+  - {fileID: 2433053474797929671}
+  m_Father: {fileID: 5882129324372161053}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &3330359476774511334
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090449248883209036}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: e923b62dcc5644d3995d261d610f0bfe, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -7.212192, y: -0.34040904}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.5878344, y: 1.1732688}
+  m_EdgeRadius: 0
+--- !u!50 &6301517757315843422
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090449248883209036}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: e923b62dcc5644d3995d261d610f0bfe, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!1 &2142617126515861977
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7642590113788605526}
+  - component: {fileID: 4356027070548637174}
+  - component: {fileID: 8707525252716990718}
+  m_Layer: 10
+  m_Name: HedgePart3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7642590113788605526
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142617126515861977}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2889104008276685287}
+  - {fileID: 6925792930683437858}
+  - {fileID: 286646240677481553}
+  m_Father: {fileID: 5882129324372161053}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &4356027070548637174
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142617126515861977}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: e923b62dcc5644d3995d261d610f0bfe, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 7.321489, y: -0.33692455}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.715293, y: 1.2011051}
+  m_EdgeRadius: 0
+--- !u!50 &8707525252716990718
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2142617126515861977}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: e923b62dcc5644d3995d261d610f0bfe, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &3806720330235869251
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,6 +364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 286646240677481553}
   - component: {fileID: 3445898383729047649}
+  - component: {fileID: 1566766210478573786}
   m_Layer: 0
   m_Name: Hedge_0001 (2)
   m_TagString: Untagged
@@ -186,8 +383,8 @@ Transform:
   m_LocalPosition: {x: 5.42, y: -0.38, z: 0.28794742}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
-  m_Father: {fileID: 5882129324372161053}
-  m_RootOrder: 6
+  m_Father: {fileID: 7642590113788605526}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3445898383729047649
 SpriteRenderer:
@@ -237,6 +434,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1566766210478573786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3806720330235869251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63c5d515dea62413ba72f60c78e31a60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bushBurn: {fileID: 2606221310925022800, guid: 689e9b0e296ab4a779b3b70371f06f25,
+    type: 3}
+  matchStrike: {fileID: 8300000, guid: 54d8606b805b44bc3b433abe92e0735a, type: 3}
 --- !u!1 &5484524953996643723
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,6 +459,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6322032929485602172}
   - component: {fileID: 742963722707566508}
+  - component: {fileID: 8535370976983664921}
   m_Layer: 0
   m_Name: Hedge_0001 (1)
   m_TagString: Untagged
@@ -265,8 +478,8 @@ Transform:
   m_LocalPosition: {x: -1.45, y: -0.38, z: 0.28794742}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
-  m_Father: {fileID: 5882129324372161053}
-  m_RootOrder: 4
+  m_Father: {fileID: 5324793787170730901}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &742963722707566508
 SpriteRenderer:
@@ -316,6 +529,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8535370976983664921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5484524953996643723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63c5d515dea62413ba72f60c78e31a60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bushBurn: {fileID: 2606221310925022800, guid: 689e9b0e296ab4a779b3b70371f06f25,
+    type: 3}
+  matchStrike: {fileID: 8300000, guid: 54d8606b805b44bc3b433abe92e0735a, type: 3}
 --- !u!1 &5849019437359039497
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,6 +554,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2433053474797929671}
   - component: {fileID: 1692347294808868005}
+  - component: {fileID: 8349634721733385304}
   m_Layer: 0
   m_Name: Hedge_0003 (2)
   m_TagString: Untagged
@@ -344,8 +573,8 @@ Transform:
   m_LocalPosition: {x: -5.33, y: -0.36, z: 0.28794742}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
-  m_Father: {fileID: 5882129324372161053}
-  m_RootOrder: 7
+  m_Father: {fileID: 6682714261124005876}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1692347294808868005
 SpriteRenderer:
@@ -395,6 +624,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8349634721733385304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5849019437359039497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63c5d515dea62413ba72f60c78e31a60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bushBurn: {fileID: 2606221310925022800, guid: 689e9b0e296ab4a779b3b70371f06f25,
+    type: 3}
+  matchStrike: {fileID: 8300000, guid: 54d8606b805b44bc3b433abe92e0735a, type: 3}
 --- !u!1 &5882129324372161055
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,15 +671,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 2.2079022, z: -0.28794742}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2889104008276685287}
-  - {fileID: 2511850632806669560}
-  - {fileID: 6925792930683437858}
-  - {fileID: 6375256975346223128}
-  - {fileID: 6322032929485602172}
-  - {fileID: 3397457427797104204}
-  - {fileID: 286646240677481553}
-  - {fileID: 2433053474797929671}
-  - {fileID: 6190579355386012709}
+  - {fileID: 6682714261124005876}
+  - {fileID: 5324793787170730901}
+  - {fileID: 7642590113788605526}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -446,7 +684,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5882129324372161055}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 6200000, guid: e923b62dcc5644d3995d261d610f0bfe, type: 2}
   m_IsTrigger: 0
@@ -505,7 +743,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5882129324372161055}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 6200000, guid: e923b62dcc5644d3995d261d610f0bfe, type: 2}
   m_IsTrigger: 0
@@ -531,7 +769,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5882129324372161055}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 6200000, guid: e923b62dcc5644d3995d261d610f0bfe, type: 2}
   m_IsTrigger: 0
@@ -550,6 +788,88 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.57776, y: 1.033205}
   m_EdgeRadius: 0
+--- !u!1 &5914697333299176268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5324793787170730901}
+  - component: {fileID: 7831152235861633977}
+  - component: {fileID: 2869800246046419819}
+  m_Layer: 10
+  m_Name: HedgePart2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5324793787170730901
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5914697333299176268}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6322032929485602172}
+  - {fileID: 3397457427797104204}
+  - {fileID: 6190579355386012709}
+  m_Father: {fileID: 5882129324372161053}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &7831152235861633977
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5914697333299176268}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: e923b62dcc5644d3995d261d610f0bfe, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.10616732, y: -0.33526993}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.9794922, y: 1.1519527}
+  m_EdgeRadius: 0
+--- !u!50 &2869800246046419819
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5914697333299176268}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 6200000, guid: e923b62dcc5644d3995d261d610f0bfe, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &5960926904852323382
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,6 +880,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2889104008276685287}
   - component: {fileID: 57319553226292076}
+  - component: {fileID: 7246264060600057884}
   m_Layer: 10
   m_Name: Hedge_0002 (1)
   m_TagString: Untagged
@@ -578,7 +899,7 @@ Transform:
   m_LocalPosition: {x: 7.33, y: -0.37790215, z: 0.28794742}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
-  m_Father: {fileID: 5882129324372161053}
+  m_Father: {fileID: 7642590113788605526}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &57319553226292076
@@ -629,6 +950,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7246264060600057884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5960926904852323382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63c5d515dea62413ba72f60c78e31a60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bushBurn: {fileID: 2606221310925022800, guid: 689e9b0e296ab4a779b3b70371f06f25,
+    type: 3}
+  matchStrike: {fileID: 8300000, guid: 54d8606b805b44bc3b433abe92e0735a, type: 3}
 --- !u!1 &6305111626442925320
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,6 +975,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2511850632806669560}
   - component: {fileID: 89033804035362292}
+  - component: {fileID: 7595881396824381965}
   m_Layer: 10
   m_Name: Hedge_0002 (3)
   m_TagString: Untagged
@@ -657,8 +994,8 @@ Transform:
   m_LocalPosition: {x: -7.2, y: -0.37790215, z: 0.28794742}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
-  m_Father: {fileID: 5882129324372161053}
-  m_RootOrder: 1
+  m_Father: {fileID: 6682714261124005876}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &89033804035362292
 SpriteRenderer:
@@ -708,6 +1045,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7595881396824381965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6305111626442925320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63c5d515dea62413ba72f60c78e31a60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bushBurn: {fileID: 2606221310925022800, guid: 689e9b0e296ab4a779b3b70371f06f25,
+    type: 3}
+  matchStrike: {fileID: 8300000, guid: 54d8606b805b44bc3b433abe92e0735a, type: 3}
 --- !u!1 &8469292430597820619
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,6 +1070,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6925792930683437858}
   - component: {fileID: 2458729447705959452}
+  - component: {fileID: 3718273984347517769}
   m_Layer: 0
   m_Name: Hedge_0003
   m_TagString: Untagged
@@ -736,8 +1089,8 @@ Transform:
   m_LocalPosition: {x: 9.22, y: -0.39, z: 0.28794742}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
-  m_Father: {fileID: 5882129324372161053}
-  m_RootOrder: 2
+  m_Father: {fileID: 7642590113788605526}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2458729447705959452
 SpriteRenderer:
@@ -787,6 +1140,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3718273984347517769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8469292430597820619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63c5d515dea62413ba72f60c78e31a60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bushBurn: {fileID: 2606221310925022800, guid: 689e9b0e296ab4a779b3b70371f06f25,
+    type: 3}
+  matchStrike: {fileID: 8300000, guid: 54d8606b805b44bc3b433abe92e0735a, type: 3}
 --- !u!1 &8596816504097200307
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,6 +1165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3397457427797104204}
   - component: {fileID: 4147363760490686581}
+  - component: {fileID: 7712069141407750312}
   m_Layer: 0
   m_Name: Hedge_0003 (1)
   m_TagString: Untagged
@@ -815,8 +1184,8 @@ Transform:
   m_LocalPosition: {x: 1.62, y: -0.36, z: 0.28794742}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
-  m_Father: {fileID: 5882129324372161053}
-  m_RootOrder: 5
+  m_Father: {fileID: 5324793787170730901}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4147363760490686581
 SpriteRenderer:
@@ -866,3 +1235,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7712069141407750312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8596816504097200307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63c5d515dea62413ba72f60c78e31a60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bushBurn: {fileID: 2606221310925022800, guid: 689e9b0e296ab4a779b3b70371f06f25,
+    type: 3}
+  matchStrike: {fileID: 8300000, guid: 54d8606b805b44bc3b433abe92e0735a, type: 3}

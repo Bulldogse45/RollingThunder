@@ -8,6 +8,8 @@ public class Ball : MonoBehaviour
     [SerializeField] AudioClip clock;
     [SerializeField] AudioClip eat;
     [SerializeField] AudioClip impact;
+    [SerializeField] GameObject bushBurn;
+
     AudioSource audio;
     [SerializeField] float carrotSeedUp = 2f;
     public float speedPercentage = 1;
@@ -20,7 +22,9 @@ public class Ball : MonoBehaviour
     public void Start()
     {
         audio = GetComponent<AudioSource>();
+        speed = 1;
     }
+    
     void Update()
     {
         Rigidbody2D rb2D = GetComponent<Rigidbody2D>();
@@ -85,8 +89,12 @@ public class Ball : MonoBehaviour
     }
     void OnCollisionStay2D(Collision2D collision)
     {
-        if (ss.getMatchesCount() > 0 && Input.GetKey(KeyCode.J) && collision.gameObject.name.Contains("Hedge"))
+        if(ss.getMatchesCount() > 0 && Input.GetKey(KeyCode.J) && collision.gameObject.name.Contains("HedgePart")) 
         {
+            HedgePart[] childBushes = collision.gameObject.GetComponentsInChildren<HedgePart>();
+            foreach(HedgePart bush in childBushes){
+                bush.burnSelf();
+            }
             Destroy(collision.gameObject);
             ss.decrementMatchesCount();
         }
