@@ -8,34 +8,39 @@ public class Ball : MonoBehaviour
     [SerializeField] AudioClip clock;
     [SerializeField] AudioClip eat;
     [SerializeField] AudioClip impact;
-    public float speed;
     AudioSource audio;
+    [SerializeField] float carrotSeedUp = 2f;
+    public float speedPercentage = 1;
+    public float speed = 11f;
+    private bool carrotSpeed = false;
+    private float carrotTime = 0f;
+    private float timeOfCarrotSpeed = 3f;
 
 
     public void Start()
     {
         audio = GetComponent<AudioSource>();
-        speed = 1;
     }
     void Update()
     {
         Rigidbody2D rb2D = GetComponent<Rigidbody2D>();
-        if (Input.GetKey(KeyCode.A))
-        {
-            rb2D.velocity = new Vector2(-12f * speed, rb2D.velocity.y);
+        if (Input.GetKey(KeyCode.A)) {
+            rb2D.velocity = new Vector2(-speed * speedPercentage, rb2D.velocity.y);
         }
-        if (Input.GetKey(KeyCode.D))
-        {
+        if (Input.GetKey(KeyCode.D)) {
 
-            rb2D.velocity = new Vector2(15f * speed, rb2D.velocity.y);
+            rb2D.velocity = new Vector2(speed * speedPercentage, rb2D.velocity.y);
         }
-        if (Input.GetKey(KeyCode.W))
-        {
-            rb2D.velocity = new Vector2(rb2D.velocity.x, 7.5f * speed);
+        if (Input.GetKey(KeyCode.W)) {
+            rb2D.velocity = new Vector2(rb2D.velocity.x, speed * speedPercentage);
         }
-        if (Input.GetKey(KeyCode.S))
-        {
-            rb2D.velocity = new Vector2(rb2D.velocity.x, -12f * speed);
+        if (Input.GetKey(KeyCode.S)) {
+            rb2D.velocity = new Vector2(rb2D.velocity.x, -speed * speedPercentage);
+        }
+        if (carrotSpeed) {
+
+            carrotSpeed = carrotCheck(Time.fixedTime - carrotTime);
+            print(carrotSpeed);
         }
         if (Input.GetKey(KeyCode.K))
         {
@@ -70,6 +75,13 @@ public class Ball : MonoBehaviour
             ScoreScript.currentScore += 5;
             ss.scoreOnScreen();
         }
+        if (collision.gameObject.name.Contains("Carrot")) {
+
+            Destroy(collision.gameObject);
+            carrotSpeed = true;
+            carrotTime = Time.fixedTime;
+        }
+
     }
     void OnCollisionStay2D(Collision2D collision)
     {
@@ -78,5 +90,23 @@ public class Ball : MonoBehaviour
             Destroy(collision.gameObject);
             ss.decrementMatchesCount();
         }
+    }
+    private bool carrotCheck(float time) {
+
+        SpriteRenderer ball = GetComponent<SpriteRenderer>();
+
+        if (time <= timeOfCarrotSpeed) {
+
+            speedPercentage = carrotSeedUp;
+
+            ball.color = new Color(Random.Range(.0f, .9f), Random.Range(.0f, .9f), Random.Range(.0f, .9f), 1);
+
+            return true;
+        }
+        ball.color = Color.white;
+
+        speedPercentage = 1;
+
+        return false;
     }
 }
