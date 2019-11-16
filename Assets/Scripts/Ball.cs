@@ -22,7 +22,6 @@ public class Ball : MonoBehaviour
     public void Start()
     {
         audio = GetComponent<AudioSource>();
-        speed = 1;
     }
     
     void Update()
