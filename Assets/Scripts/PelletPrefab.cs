@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PelletPrefab : MonoBehaviour
 {
-
-    float speedPellet = 4f;
+    public static float speedPellet = 4f;
     private Rigidbody2D rbPellet;
     private Vector2 screenBoundsPellet;
 
@@ -25,11 +24,5 @@ public class PelletPrefab : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Destroy(gameObject);
-        ScoreScript.currentScore += 5;
     }
 }
