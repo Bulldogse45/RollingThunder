@@ -22,7 +22,7 @@ public class Pond : MonoBehaviour
 
         if (collision.gameObject.name == "Ball") {
 
-            collision.gameObject.GetComponentInParent<Ball>().speed = .2f;
+            collision.gameObject.GetComponentInParent<Ball>().speedPercentage = .2f;
             collision.gameObject.GetComponentInParent<Ball>().GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             collision.gameObject.GetComponentInParent<Ball>().GetComponent<Rigidbody2D>().gravityScale = 0;
         }
@@ -32,7 +32,7 @@ public class Pond : MonoBehaviour
 
         if (collision.gameObject.name == "Ball") {
 
-            collision.gameObject.GetComponentInParent<Ball>().speed = 1;
+            collision.gameObject.GetComponentInParent<Ball>().speedPercentage = 1;
             collision.gameObject.GetComponentInParent<Ball>().GetComponent<Rigidbody2D>().gravityScale = 1;
         }
     }
