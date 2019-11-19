@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PelletPrefab : MonoBehaviour
 {
-    public static float speedPellet = 4f;
     private Rigidbody2D rbPellet;
     private Vector2 screenBoundsPellet;
 
@@ -12,7 +11,7 @@ public class PelletPrefab : MonoBehaviour
     void Start()
     {
         rbPellet = GetComponent<Rigidbody2D>();
-        rbPellet.velocity = new Vector2(rbPellet.velocity.x, speedPellet);
+        rbPellet.velocity = new Vector2(rbPellet.velocity.x, BackgroundGrass.fallSpeed * -1);
         screenBoundsPellet = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         Physics2D.IgnoreLayerCollision(8, 5);
     }
@@ -24,5 +23,9 @@ public class PelletPrefab : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    void FixedUpdate()
+    {
+        rbPellet.velocity = new Vector2(rbPellet.velocity.x, BackgroundGrass.fallSpeed * -1);
     }
 }

@@ -45,12 +45,13 @@ public class Ball : MonoBehaviour
             carrotSpeed = carrotCheck(Time.fixedTime - carrotTime);
             print(carrotSpeed);
         }
-        if (Input.GetKey(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.K))
         {
             if (ss.getClockCount() > 0)
             {
                 audio.clip = clock;
                 audio.Play();
+                StartCoroutine(Speed());
                 ss.decrementClockCount();
                 
             }
@@ -116,4 +117,20 @@ public class Ball : MonoBehaviour
 
         return false;
     }
+
+    IEnumerator Speed()
+    {
+        int sec = 8;
+        float time = 0;
+        BackgroundGrass.fallSpeed = -2f;
+        GenerateObject.spawnTime = 2f;
+        while (time < sec)
+        {
+            time += Time.deltaTime;
+            yield return null;
+        }
+        BackgroundGrass.fallSpeed = -4f;
+        GenerateObject.spawnTime = 1f;
+    }
+
 }
