@@ -5,6 +5,7 @@ using UnityEngine;
 public class BackgroundGrass : MonoBehaviour
 {
     public static float fallSpeed = -4f;
+    public static float constantFallSpeed;
     Vector2 startPosition;
     // Start is called before the first frame update
     void Start()

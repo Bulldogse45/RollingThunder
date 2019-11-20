@@ -17,6 +17,7 @@ public class Ball : MonoBehaviour
     private bool carrotSpeed = false;
     private float carrotTime = 0f;
     private float timeOfCarrotSpeed = 3f;
+    public static bool slowDown = true; 
 
 
     public void Start()
@@ -120,6 +121,7 @@ public class Ball : MonoBehaviour
 
     IEnumerator Speed()
     {
+        slowDown = false;
         int sec = 8;
         float time = 0;
         BackgroundGrass.fallSpeed = -2f;
@@ -129,8 +131,9 @@ public class Ball : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
-        BackgroundGrass.fallSpeed = -4f;
-        GenerateObject.spawnTime = 1f;
+        slowDown = true;
+        BackgroundGrass.fallSpeed = BackgroundGrass.constantFallSpeed;
+        GenerateObject.spawnTime = GenerateObject.constantSpawnTime;
     }
 
 }

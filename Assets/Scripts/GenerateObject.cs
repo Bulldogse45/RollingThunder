@@ -5,6 +5,7 @@ using UnityEngine;
 public class GenerateObject : MonoBehaviour {
     [SerializeField] public static float spawnTime = 1.0f;
     [SerializeField] int path = 3;
+    public static float constantSpawnTime;
 
     public GameObject[] prefabs = new GameObject[11];
     public GameObject matches;
