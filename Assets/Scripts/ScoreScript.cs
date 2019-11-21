@@ -24,7 +24,8 @@ public class ScoreScript : MonoBehaviour
      * update score once per frame
      */
     void Start()
-    {
+    {   
+        currentScore = 0;
         scoreText.text = currentScore.ToString();
         matchCountText.text = matchesCount.ToString();
         InvokeRepeating("UpdateScore", 0, 1f);
