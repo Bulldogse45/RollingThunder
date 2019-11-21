@@ -41,7 +41,6 @@ public class ScoreScript : MonoBehaviour
         float time = Time.deltaTime;
 
         timer += time;
-       
 
         if (timer > .02 && timer < .40)
         {

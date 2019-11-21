@@ -55,7 +55,11 @@ public class GameOver : MonoBehaviour
     //This function takes the user to the start scene    
     public void LoadStartScene()
     {
-            SceneManager.LoadScene(0);
+        SceneManager.LoadScene(0);
+        BackgroundGrass.fallSpeed = -4f;
+        GenerateObject.spawnTime = 1f;
+        ScoreScript.currentScore = 0;
+        ScoreScript.clockCount = 0;
     }
 
     //This function quits the game. 
