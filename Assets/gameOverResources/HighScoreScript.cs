@@ -144,6 +144,9 @@ public class HighScoreScript : MonoBehaviour
         GenerateObject.spawnTime = 1f;
         ScoreScript.currentScore = 0;
         ScoreScript.clockCount = 0;
+        ScoreScript.endScore = 0;
+        GameOver.newScore = 0;
+        GameOver.newName = null;
     }
 
     //This function quits the game. 
