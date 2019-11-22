@@ -18,24 +18,25 @@ public class GenerateObject : MonoBehaviour {
     void Start() {
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         screenLeft = screenBounds.x;
-        StartCoroutine(objectsSpawns());
+        float f = -27.0f;
+        while( f < 0){
+            SpawnWithLocation(f);
+            f+=4.8f;
+        }
         StartCoroutine(pondSpawns());
         StartCoroutine(carrotSpawn());
 
     }
-    void Spawn() {
-
+    public void Spawn() {
         GameObject obj = Instantiate(prefabs[Random.Range(0, prefabs.Length)]);
         float set = Random.Range(-screenBounds.x, screenBounds.x + 5);
         obj.transform.position = new Vector2(0, screenBounds.y * -2f);
 
     }
-    IEnumerator objectsSpawns() {
-        while (true) {
-            yield return new WaitForSeconds(spawnTime);
-            yield return new WaitForFixedUpdate();
-            Spawn();
-        }
+    public void SpawnWithLocation(float y) {
+        GameObject obj = Instantiate(prefabs[Random.Range(0, prefabs.Length)]);
+        obj.transform.position = new Vector2(0, y);
+
     }
     IEnumerator pondSpawns() {
 

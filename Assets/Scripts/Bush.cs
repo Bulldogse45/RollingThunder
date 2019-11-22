@@ -23,6 +23,8 @@ public class Bush : MonoBehaviour
         {
 
             Destroy(gameObject);
+            GameObject randGen = GameObject.Find("RandomGen");
+            randGen.GetComponent<GenerateObject>().Spawn();
             //print(transform.position.y + "screen = " + screenBounds.y);
         }
     }
