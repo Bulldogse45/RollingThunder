@@ -17,6 +17,7 @@ public class Ball : MonoBehaviour
     private bool carrotSpeed = false;
     private float carrotTime = 0f;
     private float timeOfCarrotSpeed = 3f;
+    public static bool slowDown = true; 
 
 
     public void Start()
@@ -45,12 +46,13 @@ public class Ball : MonoBehaviour
             carrotSpeed = carrotCheck(Time.fixedTime - carrotTime);
             print(carrotSpeed);
         }
-        if (Input.GetKey(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.K))
         {
             if (ss.getClockCount() > 0)
             {
                 audio.clip = clock;
                 audio.Play();
+                StartCoroutine(Speed());
                 ss.decrementClockCount();
                 
             }
@@ -116,4 +118,22 @@ public class Ball : MonoBehaviour
 
         return false;
     }
+
+    IEnumerator Speed()
+    {
+        slowDown = false;
+        int sec = 8;
+        float time = 0;
+        BackgroundGrass.fallSpeed = -2f;
+        GenerateObject.spawnTime = 2f;
+        while (time < sec)
+        {
+            time += Time.deltaTime;
+            yield return null;
+        }
+        slowDown = true;
+        BackgroundGrass.fallSpeed = BackgroundGrass.constantFallSpeed;
+        GenerateObject.spawnTime = GenerateObject.constantSpawnTime;
+    }
+
 }

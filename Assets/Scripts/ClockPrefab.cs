@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ClockPrefab : MonoBehaviour
 {
-    public static float speedClock = 4f;
     private Rigidbody2D rbClock;
     private Vector2 screenBoundsClock;
 
@@ -12,7 +11,7 @@ public class ClockPrefab : MonoBehaviour
     void Start()
     {
         rbClock = GetComponent<Rigidbody2D>();
-        rbClock.velocity = new Vector2(rbClock.velocity.x, speedClock);
+        rbClock.velocity = new Vector2(rbClock.velocity.x, BackgroundGrass.fallSpeed * -1);
         screenBoundsClock = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
         Physics2D.IgnoreLayerCollision(8, 5);
     }
@@ -24,5 +23,10 @@ public class ClockPrefab : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    void FixedUpdate()
+    {
+        rbClock.velocity = new Vector2(rbClock.velocity.x, BackgroundGrass.fallSpeed * -1);
     }
 }

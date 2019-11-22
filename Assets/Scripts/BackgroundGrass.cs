@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BackgroundGrass : MonoBehaviour
 {
-    float fallSpeed = -4f;
+    public static float fallSpeed = -4f;
+    public static float constantFallSpeed;
     Vector2 startPosition;
     // Start is called before the first frame update
     void Start()
@@ -12,8 +13,7 @@ public class BackgroundGrass : MonoBehaviour
         startPosition = transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // help from this video on scrolling background
         // https://www.youtube.com/watch?v=IgZQjGyB9zg

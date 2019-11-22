@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GenerateObject : MonoBehaviour {
-    [SerializeField] float spawnTime = 1.0f;
+    [SerializeField] public static float spawnTime = 1.0f;
     [SerializeField] int path = 3;
+    public static float constantSpawnTime;
 
     public GameObject[] prefabs = new GameObject[11];
     public GameObject matches;
@@ -32,6 +33,7 @@ public class GenerateObject : MonoBehaviour {
     IEnumerator objectsSpawns() {
         while (true) {
             yield return new WaitForSeconds(spawnTime);
+            yield return new WaitForFixedUpdate();
             Spawn();
         }
     }

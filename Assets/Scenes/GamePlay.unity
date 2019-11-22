@@ -141,7 +141,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a49cc0fcb78a4fa59eebc4ef457978f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnTime: 1
   path: 3
   prefabs:
   - {fileID: 3053432419548291576, guid: 9a66ae1a516e240a2b531add86742e20, type: 3}
@@ -344,7 +343,9 @@ MonoBehaviour:
   clock: {fileID: 8300000, guid: beb44a6b0249c2e4cad53c18d61bf04f, type: 3}
   eat: {fileID: 8300000, guid: 072562a9bdacde84dbc5c2e83a119cd8, type: 3}
   impact: {fileID: 8300000, guid: 565d0b8dc7e94034bb04c69f35d39109, type: 3}
+  bushBurn: {fileID: 0}
   carrotSeedUp: 2
+  speedPercentage: 1
   speed: 8
 --- !u!58 &469407178
 CircleCollider2D:
