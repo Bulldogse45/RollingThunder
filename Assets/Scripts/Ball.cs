@@ -9,6 +9,7 @@ public class Ball : MonoBehaviour
     [SerializeField] AudioClip eat;
     [SerializeField] AudioClip impact;
     [SerializeField] GameObject bushBurn;
+    [SerializeField] AudioClip speedupSound; 
 
     AudioSource audio;
     [SerializeField] float carrotSeedUp = 2f;
@@ -82,6 +83,8 @@ public class Ball : MonoBehaviour
         }
         if (collision.gameObject.name.Contains("Carrot")) {
 
+            audio.clip = speedupSound;
+            audio.Play();
             Destroy(collision.gameObject);
             carrotSpeed = true;
             carrotTime = Time.fixedTime;
