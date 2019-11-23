@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using System.Text.RegularExpressions;
 using System;
+using System.IO;
 using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour
@@ -31,6 +32,10 @@ public class GameOver : MonoBehaviour
      */
     void Start()
     {
+        if(!File.Exists(Application.dataPath + "/highscores.txt"))
+        {
+            System.IO.File.WriteAllText(Application.dataPath + "/highscores.txt", "NA - 0 \nNA - 0 \nNA - 0 \nNA - 0 \nNA - 0 \nNA - 0 \nNA - 0 \nNA - 0 \nNA - 0 \nNA - 0 \n");
+        }
         scoreText.text = ScoreScript.endScore.ToString();
         string[] scores = System.IO.File.ReadAllLines(Application.dataPath + "/highscores.txt");
         int lastScore = Int32.Parse(Regex.Match(scores[9], @"\d+").Value);
