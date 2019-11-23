@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Text.RegularExpressions;
+using System;
+using System.IO;
 using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour
@@ -11,7 +14,6 @@ public class GameOver : MonoBehaviour
     //[SerializeField] int currentScore = 300;
     [SerializeField] GameObject highScoreContainer;
     [SerializeField] GameObject nonHighScoreButtons;
-    int highScore = 20;
 
     private Transform highScoreInfo;
     private Transform highScoreTemp;
@@ -30,12 +32,20 @@ public class GameOver : MonoBehaviour
      */
     void Start()
     {
-       scoreText.text = ScoreScript.endScore.ToString();
-       if(ScoreScript.endScore < highScore)
+        if(!File.Exists(Application.dataPath + "/highscores.txt"))
+        {
+            System.IO.File.WriteAllText(Application.dataPath + "/highscores.txt", "NA - 0 \nNA - 0 \nNA - 0 \nNA - 0 \nNA - 0 \nNA - 0 \nNA - 0 \nNA - 0 \nNA - 0 \nNA - 0 \n");
+        }
+        scoreText.text = ScoreScript.endScore.ToString();
+        string[] scores = System.IO.File.ReadAllLines(Application.dataPath + "/highscores.txt");
+        int lastScore = Int32.Parse(Regex.Match(scores[9], @"\d+").Value);
+        print("The last score is " + lastScore);
+        print("The current score is " + ScoreScript.endScore);
+        if(ScoreScript.endScore < lastScore)
         {
             highScoreContainer.SetActive(false);
         }
-       else
+        else
         {
             nonHighScoreButtons.SetActive(false);
         }
