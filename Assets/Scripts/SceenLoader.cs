@@ -20,4 +20,12 @@ public class SceenLoader : MonoBehaviour
 
         SceneManager.LoadScene("highScoreTable");
     }
+    public void instructionsToStart() {
+
+        SceneManager.LoadScene(0); 
+    }
+    public void toInstructions() {
+
+        SceneManager.LoadScene("Instructions");
+    }
 }
