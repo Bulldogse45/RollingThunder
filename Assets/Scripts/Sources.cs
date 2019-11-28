@@ -23,18 +23,18 @@ public class Sources : MonoBehaviour
         "https://www.udemy.com/course/unitycourse/learn/lecture/10761154"
     }; 
     String[] sources = new String[] {
-        "Hamster, cage, and food clipart purchased: \nhttps://graphicriver.net/item/animal-pets-grooming-and-healthcare-flat-colorful-vector-icons/14484763", 
-        "Clock Sound, Ticking, Food Sound, Match Strike: \n Sound effects obtained from https://www.zapsplat.com", 
-        "Menu Yard: \nhttps://www.freepik.com/premium-vector/vector-illustration-garden-tree-with-green-grass_5589457.htm#page=1&query=garden&position=14",
-        "Clock: \nhttp://clipart-library.com/clock-images-free.html",
-        "Keys: \nhttps://www.webnots.com/download-free-keyboard-key-images-in-black/",
-        "Gameplay Grass: \nhttps://opengameart.org/content/18-32-x-32-basic-long-grassy-tiles - open source",
-        "Explosion: \nhttps://opengameart.org/content/pixel-explosion-12-frames - open source",
-        "Matchs: \nhttps://opengameart.org/content/matches - open source",
-        "Gameplay Hamster: \nhttps://graphicriver.net/item/game-animals-sprite-sheet-volume-1/7739810 - license purchased",
-        "Hamster Ball: \nhttps://opengameart.org/content/orbs",
-        "Unity Tutorial: https://www.youtube.com/channel/UCYbK_tjZ2OrIZFBvU6CCMiA",
-        "Unity Tutorial: https://www.udemy.com/course/unitycourse/learn/lecture/10761154"
+        "Hamster, cage, and food clipart purchased: \n\nhttps://graphicriver.net/item/animal-pets-grooming-and-healthcare-flat-colorful-vector-icons/14484763", 
+        "Clock Sound, Ticking, Food Sound, Match Strike: \n\n Sound effects obtained from https://www.zapsplat.com", 
+        "Menu Yard: \n\nhttps://www.freepik.com/premium-vector/vector-illustration-garden-tree-with-green-grass_5589457.htm#page=1&query=garden&position=14",
+        "Clock: \n\nhttp://clipart-library.com/clock-images-free.html",
+        "Keys: \n\nhttps://www.webnots.com/download-free-keyboard-key-images-in-black/",
+        "Gameplay Grass: \n\nhttps://opengameart.org/content/18-32-x-32-basic-long-grassy-tiles - open source",
+        "Explosion: \n\nhttps://opengameart.org/content/pixel-explosion-12-frames - open source",
+        "Matches: \n\nhttps://opengameart.org/content/matches - open source",
+        "Gameplay Hamster: \n\nhttps://graphicriver.net/item/game-animals-sprite-sheet-volume-1/7739810 - license purchased",
+        "Hamster Ball: \n\nhttps://opengameart.org/content/orbs",
+        "Unity Tutorial: \n\nhttps://www.youtube.com/channel/UCYbK_tjZ2OrIZFBvU6CCMiA",
+        "Unity Tutorial: \n\nhttps://www.udemy.com/course/unitycourse/learn/lecture/10761154"
     }; 
     
     // Start is called before the first frame update
@@ -53,7 +53,7 @@ public class Sources : MonoBehaviour
             } else {
                 i = 0;
             }
-            Destroy(source, 7);
+            Destroy(source, 6);
         }
     }
     private GameObject SpawnSource(int sourceIndex) {
