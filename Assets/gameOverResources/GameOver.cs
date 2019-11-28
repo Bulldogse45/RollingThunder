@@ -6,7 +6,6 @@ using TMPro;
 using System.Text.RegularExpressions;
 using System;
 using System.IO;
-using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour
 {
