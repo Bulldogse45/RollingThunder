@@ -28,6 +28,7 @@ public class ScoreScript : MonoBehaviour
         currentScore = 0;
         scoreText.text = currentScore.ToString();
         matchCountText.text = matchesCount.ToString();
+        clockCountText.text = clockCount.ToString();
         InvokeRepeating("UpdateScore", 0, 1f);
     }
 
