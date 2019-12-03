@@ -45,7 +45,6 @@ public class Ball : MonoBehaviour
         if (carrotSpeed) {
 
             carrotSpeed = carrotCheck(Time.fixedTime - carrotTime);
-            print(carrotSpeed);
         }
         if (Input.GetKeyDown(KeyCode.K))
         {

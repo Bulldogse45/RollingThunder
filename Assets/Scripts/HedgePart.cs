@@ -12,7 +12,6 @@ public class HedgePart : MonoBehaviour
     // Start is called before the first frame update
     public void burnSelf()
     {
-        print("Burn baby burn");
         Vector3 position = transform.position;
         position.z = -.1f;
         GameObject burningBush = Instantiate(bushBurn, position, transform.rotation);

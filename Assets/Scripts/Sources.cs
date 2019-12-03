@@ -19,6 +19,13 @@ public class Sources : MonoBehaviour
         "https://opengameart.org/content/matches",
         "https://graphicriver.net/item/game-animals-sprite-sheet-volume-1/7739810",
         "https://opengameart.org/content/orbs",
+        "https://www.cleanpng.com/png-hamster-sticker-telegram-artikel-vkontakte-ampquot-6277716/",
+        "http://artrefuge.org/clouds-and-sky-clip-art/",
+        "https://imgbin.com/png/8Ybd7FB5/animated-film-cartoon-drawing-carrot-png",
+        "https://www.dafont.com/search.php?q=rainball",
+        "https://assetstore.unity.com/packages/2d/environments/2d-top-down-forest-world-tileset-119496",
+        "https://assetstore.unity.com/packages/audio/music/casual-game-bgm-5-135943",
+        "http://soundbible.com/",
         "https://www.youtube.com/channel/UCYbK_tjZ2OrIZFBvU6CCMiA",
         "https://www.udemy.com/course/unitycourse/learn/lecture/10761154"
     }; 
@@ -33,6 +40,13 @@ public class Sources : MonoBehaviour
         "Matches: \n\nhttps://opengameart.org/content/matches - open source",
         "Gameplay Hamster: \n\nhttps://graphicriver.net/item/game-animals-sprite-sheet-volume-1/7739810 - license purchased",
         "Hamster Ball: \n\nhttps://opengameart.org/content/orbs",
+        "Hamster Front Page:\n\n https://www.cleanpng.com/png-hamster-sticker-telegram-artikel-vkontakte-ampquot-6277716/",
+        "Sky Background front page: \n\nhttp://artrefuge.org/clouds-and-sky-clip-art/",
+        "Carrot: \n\nhttps://imgbin.com/png/8Ybd7FB5/animated-film-cartoon-drawing-carrot-png",
+        "Font Front Page: \n\nhttps://www.dafont.com/search.php?q=rainball",
+        "Bushes and Pond Objects:\n\nhttps://assetstore.unity.com/packages/2d/environments/2d-top-down-forest-world-tileset-119496",
+        "Front Page Music:\n\nhttps://assetstore.unity.com/packages/audio/music/casual-game-bgm-5-135943",
+        "Zap, water, clicks(frontpage):\n\nhttp://soundbible.com/",
         "Unity Tutorial: \n\nhttps://www.youtube.com/channel/UCYbK_tjZ2OrIZFBvU6CCMiA",
         "Unity Tutorial: \n\nhttps://www.udemy.com/course/unitycourse/learn/lecture/10761154"
     }; 

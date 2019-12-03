@@ -38,8 +38,6 @@ public class GameOver : MonoBehaviour
         scoreText.text = ScoreScript.endScore.ToString();
         string[] scores = System.IO.File.ReadAllLines(Application.dataPath + "/highscores.txt");
         int lastScore = Int32.Parse(Regex.Match(scores[9], @"\d+").Value);
-        print("The last score is " + lastScore);
-        print("The current score is " + ScoreScript.endScore);
         if(ScoreScript.endScore < lastScore)
         {
             highScoreContainer.SetActive(false);
